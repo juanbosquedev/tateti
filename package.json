@@ -1,0 +1,19 @@
+{
+  "name": "tatetijb",
+  "version": "1.0.0",
+  "description": "tateti game",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/juanbosquedev/tateti.git"
+  },
+  "author": "Juan Bosque",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/juanbosquedev/tateti/issues"
+  },
+  "homepage": "https://github.com/juanbosquedev/tateti#readme"
+}
