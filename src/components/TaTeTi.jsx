@@ -2,13 +2,14 @@
 import "./TaTeTi.css"
 import circle from "../assets/circle.png"
 import cross from "../assets/cross.png"
-import { useState } from "react"
+import { useRef, useState } from "react"
 
 let data= ["","","","","","","","",""]
 const TaTeTi = () => {
 
     let [count, setCount] = useState(0);
     let [lock, setLock]=useState(false);
+    let titleRef = useRef(null)
 
 
 
@@ -33,49 +34,57 @@ const TaTeTi = () => {
     const checkWin = ()=>{
         if(data[0] === data[1] && data[1] === data[0] && data[2] !== "")
          {
-         won(data)
+         won(data[2])
          }
          else if(data[3] === data[4] && data[4] === data[5] && data[5] !== "")
           {
-         won(data)
+         won(data[5])
           }
           else if(data[6] === data[7] && data[7] === data[8] && data[8] !== "")
           {
-         won(data)
+         won(data[8])
           }
           else if(data[0] === data[3] && data[3] === data[6] && data[6] !== "")
           {
-         won(data)
+         won(data[6])
           }
           else if(data[1] === data[4] && data[4] === data[7] && data[7] !== "")
           {
-         won(data)
+         won(data[7])
           }
           else if(data[2] === data[5] && data[5] === data[8] && data[8] !== "")
           {
-         won(data)
+         won(data[8])
           }
           else if(data[0] === data[4] && data[4] === data[8] && data[8] !== "")
           {
-         won(data)
+         won(data[8])
           }
           else if(data[0] === data[1] && data[1] === data[2] && data[2] !== "")
           {
-         won(data)
+         won(data[2])
           }
           else if(data[2] === data[4] && data[4] === data[6] && data[6] !== "")
           {
-         won(data)
+         won(data[6])
           }
     }    
 
     const won = (winner) =>{
         setLock(true);
+        if(winner==="x")
+        {
+            titleRef.current.innerHTML=  `Congratulations: <img src=${cross}>`
+        }
+        else
+        {
+            titleRef.current.innerHTML=  `Congratulations: <img src=${circle}>`
+        }
     }
 
   return (
     <div className="container">
-        <h1 className="title">Ta Te Ti Game in</h1>
+        <h1 className="title" ref={titleRef}>Ta Te Ti Game in</h1>
         <div className="board">
         <div className="row1">
         <div className="boxes" onClick={(e)=>{toggle(e,0)}}></div>
