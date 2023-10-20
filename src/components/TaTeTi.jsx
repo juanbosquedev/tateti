@@ -20,7 +20,7 @@ const TaTeTi = () => {
   let box8 = useRef(null);
   let box9 = useRef(null);
 
-  let box_array =[box1,box2,box3,box4,box5,box6,box7,box8,box9]
+  let box_array = [box1, box2, box3, box4, box5, box6, box7, box8, box9];
 
   const toggle = (e, num) => {
     if (lock) {
@@ -71,7 +71,9 @@ const TaTeTi = () => {
     setLock(false);
     data = ["", "", "", "", "", "", "", "", ""];
     titleRef.current.innerHTML = "Ta Te Ti in";
-    box_array.map((e)=>{ e.current.innerHTML ="" });
+    box_array.map((e) => {
+      e.current.innerHTML = "";
+    });
   };
 
   return (
@@ -158,8 +160,6 @@ const TaTeTi = () => {
       >
         Reset
       </button>
-      <img src={circle} />
-      <img src={cross} />
     </div>
   );
 };

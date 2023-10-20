@@ -2,10 +2,14 @@ import "./App.css";
 import TaTeTi from "./components/TaTeTi";
 
 function App() {
-  return( <div>
+  return (
+    <div>
+      <TaTeTi />
+    </div>
+  );
+}
 
-<TaTeTi/>
-  </div>
-)}
 
 export default App;
+
+
