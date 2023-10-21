@@ -3,10 +3,11 @@
   background-color: black;
   width: 100vw;
   height: 100vh;
+  background-size: cover;
 }
 
 .title {
-  margin-top: 50px;
+  margin-top: 0px;
   color: white;
   font-size: 60px;
   display: flex;
@@ -16,20 +17,19 @@
 
 .reset{
     width: 250px;
-    height: 100px;
+    height: 80px;
+    /* border:none; */
+    outline: none;
     cursor: pointer;
     border-radius: 50px;
     background-color: #1f3540;
     font-size:  26px;
     color:#26ffcb;
     margin-top: 25px;
-    margin-bottom: 50px;
-    transition: outline, box-shadow .5s ease;
+    /* margin-bottom: 80px; */
 }
 .reset:hover{
-    outline: #26ffcb solid 1px;
-    box-shadow: 0 0 4px 4px #26ffcb;
-    
+    border: #26ffcb solid 1px;
 }
 .boxes{
     display: flex;
