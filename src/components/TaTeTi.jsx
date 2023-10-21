@@ -23,7 +23,7 @@ const TaTeTi = () => {
   let box_array = [box1, box2, box3, box4, box5, box6, box7, box8, box9];
 
   const toggle = (e, num) => {
-    if(data[num]!== "") alert("busy chart")
+    if(data[num]!== "") return 0
     if (lock) {
       return 0;
     }
