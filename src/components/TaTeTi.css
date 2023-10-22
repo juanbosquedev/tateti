@@ -2,7 +2,7 @@
   text-align: center;
   background-color: black;
   width: 100vw;
-  height: 100vh;
+  /* height: 100vh; */
   background-size: cover;
 }
 
@@ -26,7 +26,7 @@
     font-size:  26px;
     color:#26ffcb;
     margin-top: 25px;
-    /* margin-bottom: 80px; */
+    margin-bottom: 10px;
 }
 .reset:hover{
     border: #26ffcb solid 1px;
@@ -69,3 +69,14 @@
     padding: 25px 20px;
     height: 50px;
 }
+@media (max-width: 768px) {
+    .title {
+      font-size: 2rem;
+    }
+    
+
+        .row1 .row2 .row3 {
+            grid-template-rows: repeat(1, minmax(1rem, 1fr));
+        }
+    
+  }
